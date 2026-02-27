@@ -13,18 +13,23 @@
 
       # --- Aliases ---
       shellAliases = {
+        # Neovim
         v = "nvim";
         vi = "nvim";
         vim = "nvim";
 
+        # colorized output
         ls = "ls --color=auto";
         grep = "grep --color=auto";
 
+        # ls variants
         ll = "ls -lF";
         la = "ls -lAF";
         l = "ls -F";
 
-        nix-update = "sudo nixos-rebuild switch --flake ~/.dominixos";
+        # NixOS configuration management
+        nfu = "nix flake update ~/.dominixos";
+        nrs = "sudo nixos-rebuild switch --flake ~/.dominixos";
       };
     };
   };
