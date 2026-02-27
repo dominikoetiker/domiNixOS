@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   machineConfig,
   hardwareConfig,
   ...
@@ -54,8 +55,8 @@
 
     # --- Communication ---
     element-desktop
-    signal-desktop
-    threema-desktop
+    pkgs-unstable.signal-desktop
+    pkgs-unstable.threema-desktop
 
     # --- Compression tools ---
     p7zip
@@ -63,10 +64,10 @@
     unzip
 
     # --- Development: IDEs and Editors ---
-    jetbrains.idea
-    jetbrains.pycharm
-    jetbrains.webstorm
-    vscode
+    pkgs-unstable.jetbrains.idea
+    pkgs-unstable.jetbrains.pycharm
+    pkgs-unstable.jetbrains.webstorm
+    pkgs-unstable.vscode
 
     # --- Development: Languages ---
     jdk
