@@ -28,7 +28,7 @@
         l = "ls -F";
 
         # NixOS configuration management
-        nfu = "nix flake update ~/.dominixos";
+        nfu = "nix flake update --flake ~/.dominixos";
         nrs = "sudo nixos-rebuild switch --flake ~/.dominixos";
       };
     };
