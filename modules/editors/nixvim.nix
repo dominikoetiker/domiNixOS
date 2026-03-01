@@ -17,6 +17,7 @@
       tabstop = 2;
       expandtab = true;
       smartindent = true;
+      clipboard = "unnamedplus";
     };
 
     # Colorscheme
@@ -147,6 +148,7 @@
       clang-tools
       python3Packages.flake8
       nodePackages.eslint_d
+      wl-clipboard
     ];
 
     # ==========================================================
