@@ -87,9 +87,10 @@
       # Dconf settings for Gnome desktop (user level).
       dconf.settings = {
 
-        # Color scheme.
+        # Interface look
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
+          show-battery-percentage = true;
         };
 
         # Mark Caps Lock as Escape.
