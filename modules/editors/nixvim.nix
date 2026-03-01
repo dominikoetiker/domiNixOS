@@ -155,6 +155,14 @@
     # 5. Keymaps
     # ==========================================================
     keymaps = [
+      # Clear search highlight after ESC
+      {
+        mode = "n";
+        key = "<Esc>";
+        action = "<cmd>nohlsearch<CR>";
+        options.desc = "Clear search highlight";
+      }
+
       # Oil
       {
         mode = "n";
