@@ -21,7 +21,10 @@
 
   services = {
     displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    desktopManager.gnome = {
+      enable = true;
+      sessionPath = [ pkgs.gdm ];
+    };
     udev.packages = with pkgs; [
       pkgs.gnome-settings-daemon
     ];
