@@ -36,7 +36,17 @@
       web-devicons.enable = true;
 
       # File Explorer
-      oil.enable = true;
+      snacks = {
+        enable = true;
+        settings = {
+          explorer = {
+            enabled = true;
+          };
+          picker = {
+            enabled = true;
+          };
+        };
+      };
 
       # Copilot (Inline suggestions)
       copilot-lua = {
@@ -163,12 +173,12 @@
         options.desc = "Clear search highlight";
       }
 
-      # Oil
+      # Snacks Explorer
       {
         mode = "n";
         key = "<leader>e";
-        action = "<cmd>Oil<CR>";
-        options.desc = "Open Oil file explorer";
+        action = "<cmd>lua Snacks.explorer()<CR>";
+        options.desc = "Open Snacks Explorer";
       }
 
       # Telescope
