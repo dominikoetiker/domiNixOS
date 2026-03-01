@@ -56,7 +56,6 @@
     # --- Communication ---
     element-desktop
     pkgs-unstable.signal-desktop
-    pkgs-unstable.threema-desktop
 
     # --- Compression tools ---
     p7zip

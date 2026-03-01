@@ -124,7 +124,6 @@
             "webstorm.desktop"
             "code.desktop"
             "signal.desktop"
-            "threema-desktop.desktop"
             "element-desktop.desktop"
             "1password.desktop"
           ];
