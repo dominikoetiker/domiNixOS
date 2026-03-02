@@ -1,21 +1,22 @@
 { pkgs, userConfig, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    ghostty
-  ];
-
   home-manager.users.${userConfig.username} = {
-    xdg.configFile."ghostty/config".text = ''
-      # Theme
-      theme = catppuccin-mocha
 
-      # Fonts
-      font-family = "JetBrainsMono Nerd Font"
-      font-size = 12
+    programs.ghostty = {
+      enable = true;
 
-      # Hide mouse cursor when typing
-      mouse-hide-while-typing = true
-    '';
+      # Activate Shell integration
+      enableBashIntegration = true;
+      enableZshIntegration = true;
+
+      # Theming
+      settings = {
+        theme = "Catppuccin Mocha";
+        font-family = "JetBrainsMono Nerd Font";
+        font-size = 12;
+        mouse-hide-while-typing = true;
+      };
+    };
   };
 }
