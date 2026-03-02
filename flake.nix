@@ -23,6 +23,7 @@
         virtualization = import ./modules/virtualization/default.nix;
         fingerprint = import ./modules/hardware/fingerprint.nix;
         onedrive = import ./modules/cloud/onedrive.nix;
+        ghostty = import ./modules/tools/ghostty.nix;
 
         nixvim = {
           imports = [

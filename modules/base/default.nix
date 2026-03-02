@@ -130,9 +130,6 @@
     ripgrep
     tree
     wget
-
-    # -- Terminal emulators ---
-    ghostty
   ];
 
   # Time zone & Locale.
