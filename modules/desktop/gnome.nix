@@ -82,7 +82,7 @@
 
       home.packages = with pkgs; [
         gnomeExtensions.appindicator # System tray icons
-        ubuntu-themes # Ubuntu like icon theme, etc.
+        yaru-theme # Ubuntu like icon theme, etc.
       ];
 
       # Dconf settings for Gnome desktop (user level).
@@ -92,7 +92,7 @@
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
           show-battery-percentage = true;
-          icon-theme = "Yaru-Ubuntu-Dark"; # Ubuntu like icon theme
+          icon-theme = "Yaru"; # Ubuntu like icon theme
         };
 
         # Mark Caps Lock as Escape.
