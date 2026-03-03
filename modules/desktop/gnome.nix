@@ -30,6 +30,12 @@
     ];
   };
 
+  # Add option to open ghostty from nautilus
+  programs.nautilus-open-any-terminal = {
+    enable = true;
+    terminal = "ghostty";
+  };
+
   # Exclude blotware from Gnome
   environment.gnome.excludePackages = (
     with pkgs;
@@ -67,6 +73,7 @@
     gnome-tweaks
     loupe
     nautilus
+    nautilus-python
     papers
     showtime
     simple-scan
