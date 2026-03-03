@@ -144,9 +144,12 @@
           button-layout = "appmenu:minimize,maximize,close";
         };
 
-        # Workspaces on all displays.
+        # Window manager
         "org/gnome/mutter" = {
+          # Workspaces on all displays.
           workspaces-only-on-primary = false;
+          # Fractional scaling
+          experimental-features = [ "scale-monitor-framebuffer" ];
         };
 
         # App Folders
