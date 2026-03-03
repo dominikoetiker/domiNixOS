@@ -24,5 +24,16 @@
       Categories=Network;
       StartupNotify=false
     '';
+    xdg.desktopEntries."OneDriveGUI" = {
+      name = "OneDrive";
+      comment = "Manage your OneDrive sync";
+      exec = "onedrivegui";
+      icon = "onedrive";
+      terminal = false;
+      categories = [
+        "Network"
+        "Utility"
+      ];
+    };
   };
 }
