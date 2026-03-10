@@ -98,6 +98,7 @@
         # Interface look
         "org/gnome/desktop/interface" = {
           color-scheme = "prefer-dark";
+          gtk-theme = "Yaru-dark";
           show-battery-percentage = true;
           icon-theme = "Yaru"; # Ubuntu like icon theme
         };
