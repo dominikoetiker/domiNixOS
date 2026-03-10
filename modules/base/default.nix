@@ -102,6 +102,7 @@
     pdftk
     plantuml
     texliveFull
+    xournalpp
 
     # --- File management ---
     transmission_4-gtk
