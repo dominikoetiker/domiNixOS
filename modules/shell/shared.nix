@@ -28,12 +28,6 @@
         # colorized grep
         grep = "grep --color=auto";
 
-        ## ls variants
-        #ls = "ls --color=auto";
-        #ll = "ls -lF";
-        #la = "ls -lAF";
-        #l = "ls -F";
-
         # ls replacement with icons and color
         ls = "eza --color=auto --icons";
         ll = "eza -l --icons --git";
