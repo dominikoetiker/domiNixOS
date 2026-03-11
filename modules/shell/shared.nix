@@ -13,13 +13,6 @@
         npm_config_prefix = "$HOME/.local";
       };
 
-      # --- Prompt ---
-      programs.starship = {
-        enable = true;
-        enableZshIntegration = true;
-        enableBashIntegration = true;
-      };
-
       # --- Aliases ---
       shellAliases = {
         # Neovim
