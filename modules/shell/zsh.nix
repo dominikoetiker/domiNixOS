@@ -34,6 +34,11 @@
         bindkey '^[[1;5A' history-substring-search-up   # Control + up
         bindkey '^[[1;5B' history-substring-search-down # Control + down
 
+        # --- Autocompletion for eza aliases ---
+        compdef la=ls
+        compdef ll=ls
+        compdef l=ls
+
         # --- 1Password Shell Plugins Integration ---
         if [ -r ~/.config/op/plugins.sh ]; then
             source ~/.config/op/plugins.sh
