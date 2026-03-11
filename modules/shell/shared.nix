@@ -33,6 +33,9 @@
         la = "eza -la --icons --git";
         l = "eza -F --icons";
 
+        # colorized concatenator
+        cat = "bat";
+
         # NixOS configuration management
         nfu = "nix flake update --flake ~/.dominixos";
         nrs = "sudo nixos-rebuild switch --flake ~/.dominixos";

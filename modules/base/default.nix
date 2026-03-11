@@ -123,6 +123,7 @@
     borgbackup
 
     # --- System and CLI tools ---
+    bat
     btop
     eza
     fastfetch
