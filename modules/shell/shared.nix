@@ -7,6 +7,7 @@
       sessionVariables = {
         VISUAL = "nvim";
         EDITOR = "nvim";
+        MANPAGER = "sh -c 'col -bx | bat -l man -p'";
         TEXMFHOME = "$HOME/.local/share/texmf";
         npm_config_prefix = "$HOME/.local";
       };
