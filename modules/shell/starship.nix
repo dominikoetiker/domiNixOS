@@ -18,6 +18,10 @@ in
       settings = {
         add_newline = false;
 
+        line_break = {
+          disabled = true;
+        };
+
         character = {
           success_symbol = "[❯](bold ${colors.green})";
           error_symbol = "[❯](bold ${colors.red})";
