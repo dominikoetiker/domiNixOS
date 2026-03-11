@@ -18,6 +18,7 @@
         user = import ./modules/user/default.nix;
         zsh = import ./modules/shell/zsh.nix;
         bash = import ./modules/shell/bash.nix;
+        starship = import ./modules/shell/starship.nix;
         tmux = import ./modules/tools/tmux.nix;
         docker = import ./modules/tools/docker.nix;
         virtualization = import ./modules/virtualization/default.nix;
