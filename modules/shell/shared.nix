@@ -27,16 +27,18 @@
         vi = "nvim";
         vim = "nvim";
 
-        # colorized grep
-        grep = "grep --color=auto";
-
         # ls replacement with icons and color
         ls = "eza --color=auto --icons";
         ll = "eza -l --icons --git";
         la = "eza -la --icons --git";
         l = "eza -F --icons";
 
-        # colorized concatenator
+        # colorize other tools
+        grep = "grep --color=auto";
+        tree = "eza --tree --icons";
+        ip = "ip -color=auto";
+
+        # colorized concatenator replacement
         cat = "bat";
 
         # NixOS configuration management
