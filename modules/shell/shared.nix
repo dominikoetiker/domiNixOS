@@ -18,14 +18,20 @@
         vi = "nvim";
         vim = "nvim";
 
-        # colorized output
-        ls = "ls --color=auto";
+        # colorized grep
         grep = "grep --color=auto";
 
-        # ls variants
-        ll = "ls -lF";
-        la = "ls -lAF";
-        l = "ls -F";
+        ## ls variants
+        #ls = "ls --color=auto";
+        #ll = "ls -lF";
+        #la = "ls -lAF";
+        #l = "ls -F";
+
+        # ls replacement with icons and color
+        ls = "eza --color=auto --icons";
+        ll = "eza -l --icons --git";
+        la = "eza -la --icons --git";
+        l = "eza -F --icons";
 
         # NixOS configuration management
         nfu = "nix flake update --flake ~/.dominixos";

@@ -124,6 +124,7 @@
 
     # --- System and CLI tools ---
     btop
+    eza
     fastfetch
     fd
     fzf
