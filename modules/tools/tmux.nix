@@ -82,6 +82,9 @@ in
         # Bind 's' to popup window with absolute Nix script path!
         bind-key s display-popup -w 80% -h 80% -E "${tsScript}/bin/ts"
 
+        # Jump back to session root (only if in Zsh or Bash)
+        bind-key r if-shell 'echo "#{pane_current_command}" | grep -qE "zsh|bash|sh"' 'send-keys "cd \"#{session_path}\"" C-m' 'display-message "Requires a shell! (Currently: #{pane_current_command})"'
+
         # -----------------------------------------------------------------------------
         # -- SYSTEM THEME
         # -----------------------------------------------------------------------------
