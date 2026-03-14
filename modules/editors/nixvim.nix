@@ -184,7 +184,6 @@
       python3Packages.flake8
       nodePackages.eslint_d
       wl-clipboard
-      chktex
       checkmake
     ];
 
