@@ -82,8 +82,28 @@
       # Treesitter & Comments
       treesitter = {
         enable = true;
-        settings.highlight.enable = true;
-        settings.indent.enable = true;
+        settings = {
+          highlight.enable = true;
+          indent.enable = true;
+          ensure_installed = [
+            "python"
+            "javascript"
+            "typescript"
+            "tsx"
+            "nix"
+            "markdown"
+            "latex"
+            "bibtex"
+            "make"
+            "html"
+            "css"
+            "json"
+            "yaml"
+            "bash"
+            "c"
+            "toml"
+          ];
+        };
       };
       ts-autotag.enable = true;
       ts-context-commentstring.enable = true; # Context-aware commenting
@@ -137,6 +157,7 @@
           sh = [ "shfmt" ];
           c = [ "clang-format" ];
           toml = [ "taplo" ];
+          tex = [ "latexindent" ];
         };
       };
     };
@@ -148,6 +169,8 @@
         python = [ "flake8" ];
         javascript = [ "eslint_d" ];
         typescript = [ "eslint_d" ];
+        tex = [ "chktex" ];
+        make = [ "checkmake" ];
       };
     };
 
@@ -161,6 +184,8 @@
       python3Packages.flake8
       nodePackages.eslint_d
       wl-clipboard
+      chktex
+      checkmake
     ];
 
     # ==========================================================
@@ -263,6 +288,18 @@
         key = "<C-l>";
         action = "<C-w>l";
         options.desc = "Go to right window";
+      }
+    ];
+
+    # ==========================================================
+    # 6. Auto Commands
+    # ==========================================================
+    autoCmd = [
+      {
+        event = [ "FileType" ];
+        pattern = [ "make" ];
+        command = "setlocal noexpandtab shiftwidth=8 softtabstop=0";
+        desc = "Use real tabs in Makefiles";
       }
     ];
   };
