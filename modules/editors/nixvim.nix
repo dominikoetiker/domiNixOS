@@ -185,6 +185,8 @@
       nodePackages.eslint_d
       wl-clipboard
       checkmake
+      gcc
+      tree-sitter
     ];
 
     # ==========================================================

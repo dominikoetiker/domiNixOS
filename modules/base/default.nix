@@ -129,6 +129,7 @@
     fastfetch
     fd
     fzf
+    gcc
     gnumake
     ncdu
     ripgrep
