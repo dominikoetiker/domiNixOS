@@ -56,6 +56,7 @@
     # --- Communication ---
     element-desktop
     pkgs-unstable.signal-desktop
+    pkgs-unstable.ferdium
 
     # --- Compression tools ---
     p7zip
