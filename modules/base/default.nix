@@ -140,6 +140,7 @@
     gcc
     gnumake
     ncdu
+    psmisc
     ripgrep
     tree
     wget
