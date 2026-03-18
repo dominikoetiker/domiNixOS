@@ -25,6 +25,7 @@
         fingerprint = import ./modules/hardware/fingerprint.nix;
         onedrive = import ./modules/cloud/onedrive.nix;
         ghostty = import ./modules/tools/ghostty.nix;
+        thunderbird = import ./modules/communication/thunderbird.nix;
 
         nixvim = {
           imports = [
