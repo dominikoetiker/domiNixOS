@@ -203,7 +203,7 @@
           name = "Password Manager";
         };
         "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4" = {
-          binding = "<Super>n";
+          binding = "<Super><Shift>t";
           command = "ghostty -e ts";
           name = "Tmux Sessionizer";
         };
