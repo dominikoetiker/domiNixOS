@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgs-unstable,
   machineConfig,
   userConfig,
   ...
@@ -85,7 +86,7 @@
     loupe
     nautilus
     nautilus-python
-    papers
+    pkgs-unstable.papers
     raider # Gnome File Shredder
     showtime
     simple-scan
