@@ -66,19 +66,27 @@
   # Include essential gnome apps and tools.
   environment.systemPackages = with pkgs; [
     baobab # Gnome Disk Usage Analyzer
+    citations # Gnome BibTeX bibliography manager
     decibels # Gnome Audio
+    gaphor # Gnome UML diagram editor
     gnome-calculator
     gnome-characters
     gnome-clocks
     gnome-control-center
+    gnome-decoder # Gnome QR code reader and generator
     gnome-disk-utility
+    gnome-graphs # Plot and and manipulate data
     gnome-logs
+    gnome-solanum # Pomodoro timer
     gnome-system-monitor
     gnome-tweaks
+    hieroglyphic # Gnome tool to filnd LaTeX symbols
+    lorem # Gnome Lorem Ipsum generator
     loupe
     nautilus
     nautilus-python
     papers
+    raider # Gnome File Shredder
     showtime
     simple-scan
     snapshot
