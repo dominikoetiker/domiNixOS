@@ -1,58 +1,59 @@
 { pkgs, userConfig, ... }:
 
 let
-  # --- Update workflow ---
+  # -------------------------------------------------------------------------
+  # Global Variables for Scripts
+  # -------------------------------------------------------------------------
+  flakeDir = "$HOME/.dominixos";
+  cacheDir = "$HOME/.cache/nixos-update";
+  resultLink = "${cacheDir}/nixos-update-result";
+  diffFile = "${cacheDir}/nixos-update-diff.txt";
+  msgFile = "${cacheDir}/nixos-commit-msg.txt";
+
+  # -------------------------------------------------------------------------
+  # Update workflow
+  # -------------------------------------------------------------------------
 
   # Update, Build & Diff (nuc = Nix Update Check)
   nix-update-check = pkgs.writeShellScriptBin "nuc" ''
     echo "Updating flake.lock..."
-    nix flake update --flake ~/.dominixos
+    nix flake update --flake ${flakeDir}
 
     echo "Building system in the background..."
-    # Switch to /tmp so the 'result' symlink is created there, keeping the home directory clean
-    cd /tmp || exit 1
+    mkdir -p ${cacheDir}
+    cd ${cacheDir} || exit 1
+    rm -f result ${resultLink} ${diffFile}
 
     # Run the build process
-    if nixos-rebuild build --flake ~/.dominixos; then
-      # Rename the generated symlink
-      mv result nixos-update-result
+    if nixos-rebuild build --flake ${flakeDir}; then
+      mv result ${resultLink}
     else
       echo "Error: Build failed. Aborting."
       exit 1
     fi
 
     echo "Comparing versions..."
-    # Save the uncolored output for the subsequent Git commit
-    ${pkgs.nvd}/bin/nvd --color never diff /run/current-system /tmp/nixos-update-result > /tmp/nixos-update-diff.txt
-
-    # Display the colored output in the terminal
-    ${pkgs.nvd}/bin/nvd --color always diff /run/current-system /tmp/nixos-update-result
+    ${pkgs.nvd}/bin/nvd --color never diff /run/current-system ${resultLink} > ${diffFile}
+    ${pkgs.nvd}/bin/nvd --color always diff /run/current-system ${resultLink}
   '';
 
-  # Commit updates (nco = Nix Commit)
+  # Automatic Commit (nco = Nix Commit)
   nix-commit-update = pkgs.writeShellScriptBin "nco" ''
-    if [ ! -f /tmp/nixos-update-diff.txt ]; then
+    if [ ! -f ${diffFile} ]; then
       echo "Error: No update information found. Please run 'nuc' first."
       exit 1
     fi
 
-    cd ~/.dominixos
-    git add flake.lock
+    git -C ${flakeDir} add flake.lock
 
-    # Create the commit message
-    echo "chore: update flake.lock and system" > /tmp/nixos-commit-msg.txt
-    echo "" >> /tmp/nixos-commit-msg.txt
+    echo "chore: update flake.lock and system" > ${msgFile}
+    echo "" >> ${msgFile}
+    grep -E '\[U\]|\[D\]|\[N\]|\[C\]' ${diffFile} >> ${msgFile}
 
-    # Append only the relevant lines (Upgrades [U], Downgrades [D], etc.) to the message
-    grep -E '\[U\]|\[D\]|\[N\]|\[C\]' /tmp/nixos-update-diff.txt >> /tmp/nixos-commit-msg.txt
-
-    # Execute the commit using the file as the message
-    git commit -F /tmp/nixos-commit-msg.txt
+    git -C ${flakeDir} commit -F ${msgFile}
 
     echo "Commit created successfully."
-
-    # Clean up temporary files and the symlink in /tmp
-    rm -f /tmp/nixos-update-result /tmp/nixos-update-diff.txt /tmp/nixos-commit-msg.txt
+    rm -rf ${cacheDir}
   '';
 
 in
@@ -60,7 +61,7 @@ in
   home-manager.users.${userConfig.username} = {
     home = {
 
-      # --- Installed user packages (including custom scripts and nvd) ---
+      # --- Installed user packages ---
       packages = [
         pkgs.nvd
         nix-update-check
@@ -102,7 +103,7 @@ in
         cat = "bat";
 
         # NixOS configuration management
-        nrs = "sudo nixos-rebuild switch --flake ~/.dominixos";
+        nrs = "sudo nixos-rebuild switch --flake ${flakeDir}";
       };
     };
   };
