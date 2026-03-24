@@ -9,8 +9,17 @@ let
     nix flake update --flake ~/.dominixos
 
     echo "Building system in the background..."
-    # --out-link creates the result symlink in /tmp to keep the working directory clean
-    nixos-rebuild build --flake ~/.dominixos --out-link /tmp/nixos-update-result
+    # Switch to /tmp so the 'result' symlink is created there, keeping the home directory clean
+    cd /tmp || exit 1
+
+    # Run the build process
+    if nixos-rebuild build --flake ~/.dominixos; then
+      # Rename the generated symlink
+      mv result nixos-update-result
+    else
+      echo "Error: Build failed. Aborting."
+      exit 1
+    fi
 
     echo "Comparing versions..."
     # Save the uncolored output for the subsequent Git commit
