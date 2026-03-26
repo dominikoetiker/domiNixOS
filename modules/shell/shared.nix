@@ -48,7 +48,7 @@ let
 
     echo "chore: update flake.lock and system" > ${msgFile}
     echo "" >> ${msgFile}
-    grep -E '\[U\]|\[D\]|\[N\]|\[C\]' ${diffFile} >> ${msgFile}
+    grep -E '\[[UDNC][*.]?\]' ${diffFile} >> ${msgFile}
 
     git -C ${flakeDir} commit -F ${msgFile}
 
