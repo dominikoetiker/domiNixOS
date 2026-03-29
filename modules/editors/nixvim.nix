@@ -65,6 +65,11 @@
         };
       };
 
+      # Copilot Chat (Chat-based interaction)
+      copilot-chat = {
+        enable = true;
+      };
+
       # Navigation & UI
       telescope.enable = true;
       harpoon.enable = true;
@@ -289,6 +294,36 @@
         key = "<C-l>";
         action = "<C-w>l";
         options.desc = "Go to right window";
+      }
+      {
+        mode = "n";
+        key = "<leader>cc";
+        action = "<cmd>CopilotChatToggle<CR>";
+        options.desc = "Toggle Copilot Chat window";
+      }
+      {
+        mode = [
+          "n"
+          "v"
+        ];
+        key = "<leader>ce";
+        action = "<cmd>CopilotChatExplain<CR>";
+        options.desc = "Copilot Chat: Explain code";
+      }
+      {
+        mode = [
+          "n"
+          "v"
+        ];
+        key = "<leader>co";
+        action = "<cmd>CopilotChatOptimize<CR>";
+        options.desc = "Copilot Chat: Optimize code";
+      }
+      {
+        mode = "n";
+        key = "<leader>cm";
+        action = "<cmd>CopilotChatModels<CR>";
+        options.desc = "Select Copilot Model";
       }
     ];
 
