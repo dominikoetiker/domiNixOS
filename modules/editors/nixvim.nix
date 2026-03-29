@@ -115,6 +115,42 @@
     };
 
     # ==========================================================
+    # Auto-Completion Engine (Dropdown Menu)
+    # ==========================================================
+    plugins.cmp = {
+      enable = true;
+      settings = {
+        autoEnableSources = true;
+
+        # Define where the dropdown gets its data from
+        sources = [
+          { name = "nvim_lsp"; } # Pulls suggestions from LSP servers
+          { name = "path"; } # Suggests file paths
+          { name = "buffer"; } # Suggests words already used in the current file
+        ];
+
+        # Keybindings for the dropdown menu
+        mapping = {
+          # Manually trigger the dropdown menu
+          "<C-Space>" = "cmp.mapping.complete()";
+
+          # Navigate the menu up and down
+          "<C-n>" = "cmp.mapping.select_next_item()";
+          "<C-p>" = "cmp.mapping.select_prev_item()";
+          "<Down>" = "cmp.mapping.select_next_item()";
+          "<Up>" = "cmp.mapping.select_prev_item()";
+
+          # Scroll the documentation window that appears next to the dropdown
+          "<C-d>" = "cmp.mapping.scroll_docs(-4)";
+          "<C-f>" = "cmp.mapping.scroll_docs(4)";
+
+          # Accept the currently selected LSP suggestion
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+        };
+      };
+    };
+
+    # ==========================================================
     # 3. LSP (Language Server Protocol)
     # ==========================================================
     plugins.lsp = {
