@@ -48,6 +48,7 @@ let
 
     echo "chore: update flake.lock and system" > ${msgFile}
     echo "" >> ${msgFile}
+    grep -E '\[[IARUDC][*\.\+\-LlRr]?\]|^Closure size:' ${diffFile} >> ${msgFile}
     grep -E '\[[UDNC][*.]?\]' ${diffFile} >> ${msgFile}
 
     git -C ${flakeDir} commit -F ${msgFile}
