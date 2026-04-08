@@ -144,18 +144,15 @@
 
           # Dash
           favorite-apps = [
-            # "org.gnome.Nautilus.desktop"
-            # "com.mitchellh.ghostty.desktop"
-            # "google-chrome.desktop"
-            # "writer.desktop"
-            # "calc.desktop"
-            # "idea.desktop"
-            # "pycharm.desktop"
-            # "webstorm.desktop"
-            # "code.desktop"
-            # "signal.desktop"
-            # "element-desktop.desktop"
-            # "1password.desktop"
+            "org.gnome.Nautilus.desktop"
+            "com.mitchellh.ghostty.desktop"
+            "google-chrome.desktop"
+            "thunderbird.desktop"
+            "writer.desktop"
+            "calc.desktop"
+            "signal.desktop"
+            "element-desktop.desktop"
+            "1password.desktop"
           ];
         };
 
