@@ -135,6 +135,10 @@
           disable-extension-version-validation = true;
           enabled-extensions = [
             "appindicatorsupport@rgcjonas.gmail.com" # System Tray.
+            "blur-my-shell@aunetx" # Blur Gnome Shell background.
+            "clipboard-indicator@tudmotu.com" # Clipboard manager for Gnome Shell.
+            "dash-to-dock@micxgx.gmail.com" # Gnome Dash customization and enhancement.
+            "tiling-assistant@leleat-on-github" # Tiling window management for Gnome.
           ];
           disabled-extensions = [ ];
 
