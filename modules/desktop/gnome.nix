@@ -103,6 +103,10 @@
       home.packages = with pkgs; [
         gnomeExtensions.appindicator # System tray icons
         yaru-theme # Ubuntu like icon theme, etc.
+        gnomeExtensions.blur-my-shell # Blur Gnome Shell background
+        gnomeExtensions.tiling-assistant # Tiling window management for Gnome
+        gnomeExtensions.dash-to-dock # Gnome Dash customization and enhancement
+        gnomeExtensions.clipboard-indicator # Clipboard manager for Gnome Shell
       ];
 
       # Dconf settings for Gnome desktop (user level).
@@ -130,9 +134,7 @@
           disable-user-extensions = false;
           disable-extension-version-validation = true;
           enabled-extensions = [
-
-            # System Tray.
-            "appindicatorsupport@rgcjonas.gmail.com"
+            "appindicatorsupport@rgcjonas.gmail.com" # System Tray.
           ];
           disabled-extensions = [ ];
 
