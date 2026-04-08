@@ -153,6 +153,7 @@
             "calc.desktop"
             "signal.desktop"
             "element-desktop.desktop"
+            "ferdium.desktop"
             "1password.desktop"
           ];
         };
