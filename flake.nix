@@ -26,6 +26,7 @@
         onedrive = import ./modules/cloud/onedrive.nix;
         ghostty = import ./modules/tools/ghostty.nix;
         thunderbird = import ./modules/communication/thunderbird.nix;
+        gemini-cli = import ./modules/tools/gemini-cli.nix;
 
         nixvim = {
           imports = [
