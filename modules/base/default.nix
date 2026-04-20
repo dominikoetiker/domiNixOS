@@ -107,8 +107,10 @@
     haskellPackages.pandoc-crossref
     haskellPackages.pandoc-lua-engine
     pdfarranger
+    pdfgrep
     pdftk
     plantuml
+    poppler-utils
     texliveFull
     xournalpp
 
