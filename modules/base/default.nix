@@ -107,6 +107,7 @@
     pandoc-plantuml-filter
     haskellPackages.pandoc-crossref
     haskellPackages.pandoc-lua-engine
+    ocrmypdf
     pdfarranger
     pdfgrep
     pdftk
