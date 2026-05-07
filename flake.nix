@@ -27,6 +27,7 @@
         ghostty = import ./modules/tools/ghostty.nix;
         thunderbird = import ./modules/communication/thunderbird.nix;
         gemini-cli = import ./modules/tools/gemini-cli.nix;
+        structurizr-cli = import ./modules/tools/structurizr-cli.nix;
 
         nixvim = {
           imports = [
