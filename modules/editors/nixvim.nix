@@ -53,6 +53,22 @@
       # Copilot (Inline suggestions)
       copilot-lua = {
         enable = true;
+        filetypes = {
+          python = true;
+          java = true;
+          javascript = true;
+          typescript = true;
+          nix = true;
+          markdown = true;
+          html = true;
+          css = true;
+          json = true;
+          yaml = true;
+          bash = true;
+          c = true;
+          toml = true;
+          tex = true;
+        }
         settings = {
           suggestion = {
             enabled = true;
