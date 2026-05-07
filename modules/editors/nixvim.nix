@@ -68,7 +68,7 @@
           c = true;
           toml = true;
           tex = true;
-        }
+        };
         settings = {
           suggestion = {
             enabled = true;
