@@ -29,6 +29,7 @@
         gemini-cli = import ./modules/tools/gemini-cli.nix;
         structurizr-cli = import ./modules/tools/structurizr-cli.nix;
         libreoffice = import ./modules/office/libreoffice.nix;
+        onlyoffice = import ./modules/office/onlyoffice.nix;
 
         nixvim = {
           imports = [
