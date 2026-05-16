@@ -147,14 +147,6 @@
             "org.gnome.Nautilus.desktop"
             "com.mitchellh.ghostty.desktop"
             "google-chrome.desktop"
-            "thunderbird.desktop"
-            "org.gnome.Calculator.desktop"
-            "writer.desktop"
-            "calc.desktop"
-            "signal.desktop"
-            "element-desktop.desktop"
-            "ferdium.desktop"
-            "1password.desktop"
           ];
         };
 
