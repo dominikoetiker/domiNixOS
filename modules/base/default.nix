@@ -97,12 +97,7 @@
     librsvg
     mermaid-cli
     mermaid-filter
-    libreoffice-fresh
     hunspell
-    hunspellDicts.de_CH
-    hunspellDicts.en_US
-    hyphenDicts.de_CH
-    hyphenDicts.en_US
     pandoc
     pandoc-plantuml-filter
     haskellPackages.pandoc-crossref
