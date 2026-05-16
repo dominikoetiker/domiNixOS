@@ -24,6 +24,7 @@
         virtualization = import ./modules/virtualization/default.nix;
         fingerprint = import ./modules/hardware/fingerprint.nix;
         onedrive = import ./modules/cloud/onedrive.nix;
+        gdrive = import ./modules/cloud/gdrive.nix;
         ghostty = import ./modules/tools/ghostty.nix;
         thunderbird = import ./modules/communication/thunderbird.nix;
         gemini-cli = import ./modules/tools/gemini-cli.nix;
