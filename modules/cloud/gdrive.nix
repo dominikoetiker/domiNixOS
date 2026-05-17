@@ -9,7 +9,7 @@
   services.gnome.gnome-keyring.enable = true;
   security.pam.services.login.enableGnomeKeyring = true;
 
-  home-manager.users.${userConfig.name} =
+  home-manager.users.${userConfig.username} =
     { pkgs, ... }:
     {
       xdg.configFile."rclone/bisync-filters.txt".text = ''
