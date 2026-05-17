@@ -74,9 +74,7 @@
             TimeoutStartSec = 3600;
             StateDirectory = "rclone-gdrive";
             ExecStart = pkgs.lib.getExe syncScript;
-            Environment = {
-              DBUS_SESSION_BUS_ADDRESS = "unix:path=/run/user/%U/bus";
-            };
+            Environment = "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/%U/bus";
           };
         };
 
