@@ -30,6 +30,9 @@
               pkgs.rclone
             ];
             text = ''
+              exec > "$STATE_DIRECTORY/debug-script.log" 2>&1
+              set -x
+
               secret-tool lookup rclone gdrive > "$STATE_DIRECTORY/rclone.conf"
               chmod 600 "$STATE_DIRECTORY/rclone.conf"
               cp "$HOME/.config/rclone/bisync-filters.txt" \
