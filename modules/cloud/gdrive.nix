@@ -91,7 +91,7 @@
         };
       };
 
-      programs.bash.shellAliases = {
+      home.shellAliases = {
         sync-drive = "systemctl --user start rclone-gdrive-bisync.service";
       };
     };
