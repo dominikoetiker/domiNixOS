@@ -30,13 +30,8 @@
               pkgs.rclone
             ];
             text = ''
-              exec > "$STATE_DIRECTORY/debug-script.log" 2>&1
-              set -x
-
               secret-tool lookup rclone gdrive > "$STATE_DIRECTORY/rclone.conf"
               chmod 600 "$STATE_DIRECTORY/rclone.conf"
-              cp "$HOME/.config/rclone/bisync-filters.txt" \
-                "$STATE_DIRECTORY/bisync-filters.txt"
 
               rclone bisync \
                 gdrive: "$HOME/GoogleDrive" \
@@ -49,7 +44,7 @@
                 --conflict-suffix \
                 "cloud-{2006-01-02_150405},local-{2006-01-02_150405}" \
                 --suffix-keep-extension \
-                --filter-from "$STATE_DIRECTORY/bisync-filters.txt" \
+                --filter-from "$HOME/.config/rclone/bisync-filters.txt" \
                 --fast-list \
                 --transfers 16 \
                 --checkers 16 \
