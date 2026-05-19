@@ -31,6 +31,7 @@
         structurizr-cli = import ./modules/tools/structurizr-cli.nix;
         libreoffice = import ./modules/office/libreoffice.nix;
         onlyoffice = import ./modules/office/onlyoffice.nix;
+        antigravity = import ./modules/editors/antigravity.nix;
 
         nixvim = {
           imports = [
