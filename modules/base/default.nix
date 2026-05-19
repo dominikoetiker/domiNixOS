@@ -63,7 +63,7 @@
 
     # --- Communication ---
     element-desktop
-    pkgs-unstable.signal-desktop
+    signal-desktop
     pkgs-unstable.ferdium
 
     # --- Compression tools ---
