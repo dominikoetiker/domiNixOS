@@ -32,6 +32,10 @@
         libreoffice = import ./modules/office/libreoffice.nix;
         onlyoffice = import ./modules/office/onlyoffice.nix;
         antigravity = import ./modules/editors/antigravity.nix;
+        intellij = import ./modules/editors/intellij.nix;
+        pycharm = import ./modules/editors/pycharm.nix;
+        webstorm = import ./modules/editors/webstorm.nix;
+        vscode = import ./modules/editors/vscode.nix;
 
         nixvim = {
           imports = [

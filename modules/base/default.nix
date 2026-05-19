@@ -71,12 +71,6 @@
     unrar
     unzip
 
-    # --- Development: IDEs and Editors ---
-    pkgs-unstable.jetbrains.idea
-    pkgs-unstable.jetbrains.pycharm
-    pkgs-unstable.jetbrains.webstorm
-    pkgs-unstable.vscode
-
     # --- Development: Languages ---
     jdk
     jdk11
