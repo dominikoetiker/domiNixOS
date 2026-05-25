@@ -53,7 +53,6 @@
       gnome-connections
       gnome-contacts
       gnome-console
-      gnome-firmware
       gnome-font-viewer
       gnome-maps
       gnome-music
@@ -77,6 +76,7 @@
     gnome-control-center
     gnome-decoder # Gnome QR code reader and generator
     gnome-disk-utility
+    gnome-firmware
     gnome-graphs # Plot and and manipulate data
     gnome-logs
     gnome-solanum # Pomodoro timer
