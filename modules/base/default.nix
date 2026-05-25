@@ -169,6 +169,9 @@
 
   # Services.
 
+  # Enable firmware updates with fwupd.
+  services.fwupd.enable = true;
+
   # Enable CUPS to print documents.
   services.avahi = {
     enable = true;

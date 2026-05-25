@@ -53,6 +53,7 @@
       gnome-connections
       gnome-contacts
       gnome-console
+      gnome-firmware
       gnome-font-viewer
       gnome-maps
       gnome-music
