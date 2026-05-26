@@ -106,6 +106,7 @@
     poppler-utils
     texliveFull
     xournalpp
+    xxd
 
     # --- File management ---
     transmission_4-gtk
