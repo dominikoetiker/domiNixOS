@@ -4,7 +4,7 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    nixpkgs.source = pkgs;
+    nixpkgs.pkgs = pkgs;
 
     # ==========================================================
     # 1. General Settings & UI
