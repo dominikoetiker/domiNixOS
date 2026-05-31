@@ -4,6 +4,7 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
+    nixpkgs.source = pkgs;
 
     # ==========================================================
     # 1. General Settings & UI
@@ -239,7 +240,7 @@
       shfmt
       clang-tools
       python3Packages.flake8
-      nodePackages.eslint_d
+      eslint_d
       wl-clipboard
       checkmake
       gcc
